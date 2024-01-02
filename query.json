@@ -1,0 +1,24 @@
+// This is how we make requests in graphQL
+
+query ReviewsQuery{
+    reviews{
+        rating, 
+        content, 
+        id,
+        author{
+            name
+        }
+    }
+} // review -> author -> name
+
+Query{
+    game(id:"2"){
+        title,
+        review{
+            rating,
+            author{
+                name
+            }
+        },
+    }
+}
